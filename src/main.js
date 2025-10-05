@@ -10,7 +10,7 @@ import {
 } from "./js/render-functions.js";
 
 const form = document.querySelector(".form");
-const input = form.querySelector("input[name='search-text']");
+const input = form.querySelector('input[name="query"], input[name="search-text"]');
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -27,6 +27,8 @@ form.addEventListener("submit", async (e) => {
 
   clearGallery();
   showLoader();
+
+  await new Promise((resolve) => requestAnimationFrame(resolve));
 
   try {
     const data = await getImagesByQuery(query);
