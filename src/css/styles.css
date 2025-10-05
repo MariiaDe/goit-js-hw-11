@@ -102,3 +102,10 @@ button:hover {
 .sl-wrapper .sl-image .sl-caption {
   display: none !important;
 }
+
+.loader { 
+  display: inline-block;
+}
+.hidden { 
+  display: none !important; 
+}

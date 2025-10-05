@@ -53,6 +53,7 @@ form.addEventListener("submit", async (e) => {
       position: "topRight",
     });
   } finally {
+    hideLoader();
     form.reset();
   }
 });
